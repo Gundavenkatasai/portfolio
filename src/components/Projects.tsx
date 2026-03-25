@@ -22,6 +22,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       github: 'https://github.com/Gundavenkatasai/Medical_emergency-main-',
       badge: 'Featured Project',
       featured: true,
+      image: '/images/medicare (1).png',
     },
     {
       title: 'Smart-Audit AI',
@@ -30,6 +31,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       tech: ['React', 'Tailwind CSS', 'Deepgram API'],
       live: 'https://hacksmart-zeta.vercel.app/',
       github: 'https://github.com/Gundavenkatasai/hacksmart',
+      image: '/images/medicare (3).png',
     },
     {
       title: 'LPU Live - Real-time Chat',
@@ -38,6 +40,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       tech: ['React', 'Node.js', 'Socket.IO'],
       live: 'https://lpulivetimepass.vercel.app/',
       github: 'https://github.com/Gundavenkatasai/lpulive',
+      image: '/images/lpulive.png',
     },
     {
       title: 'PizzaCraft - Order Management',
@@ -45,6 +48,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       features: ['Razorpay integration', 'Admin panel', 'Real-time order tracking'],
       tech: ['React', 'Node.js', 'MongoDB'],
       github: 'https://github.com/Gundavenkatasai/pizza',
+      image: '/images/medicare (1).png',
     },
   ]
 
@@ -102,6 +106,17 @@ export default function Projects({ isDark }: ProjectsProps) {
               )}
 
               <div className="h-full flex flex-col justify-between space-y-4">
+                {/* Project Image */}
+                {project.image && (
+                  <div className="w-full h-48 rounded-lg overflow-hidden mb-2">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+
                 {/* Header */}
                 <div>
                   <h3 className={`text-xl md:text-2xl font-bold mb-3 ${

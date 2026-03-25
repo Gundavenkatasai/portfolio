@@ -144,7 +144,7 @@ export default function Hero({ onResumeClick, isDark }: HeroProps) {
           </motion.div>
         </motion.div>
 
-        {/* Right - Image Placeholder */}
+        {/* Right - Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotateY: 20 }}
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -152,26 +152,12 @@ export default function Hero({ onResumeClick, isDark }: HeroProps) {
           className="relative hidden lg:block"
         >
           <div className={`image-container animate-float`}>
-            {/* Placeholder for user image */}
-            <div className={`w-full h-full rounded-3xl flex items-center justify-center text-center p-8 ${
-              isDark ? 'bg-gradient-to-br from-purple-900/40 to-blue-900/40' : 'bg-gradient-to-br from-purple-100 to-blue-100'
-            }`}>
-              <div>
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className={`text-6xl mb-4 ${isDark ? 'text-purple-300' : 'text-purple-600'}`}
-                >
-                  🧑‍💻
-                </motion.div>
-                <p className={`text-sm font-semibold ${isDark ? 'text-purple-300' : 'text-purple-700'}`}>
-                  Upload Your Image Here
-                </p>
-                <p className={`text-xs mt-2 ${isDark ? 'text-white/50' : 'text-slate-600'}`}>
-                  Place your photo to make this section yours
-                </p>
-              </div>
-            </div>
+            {/* Profile Image */}
+            <img
+              src="/images/profile.jpeg"
+              alt="Gunda VenkataSai"
+              className="w-full h-full rounded-3xl object-cover shadow-2xl"
+            />
 
             {/* Decorative blur effect */}
             <div className="absolute -inset-4 bg-gradient-to-br from-purple-600/20 via-pink-600/20 to-blue-600/20 rounded-3xl blur-2xl -z-10 animate-pulse" />

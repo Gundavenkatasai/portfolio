@@ -48,7 +48,7 @@ export default function CertificateModal({ isOpen, onClose, certificate }: Certi
         {/* PDF Viewer */}
         <div className="flex-1 overflow-hidden p-6">
           <iframe
-            src={`${certificate.url}?usp=embed_googleplus`}
+            src={certificate.url}
             className="w-full h-full rounded-lg"
             title={certificate.title}
             allow="autoplay"
@@ -58,7 +58,7 @@ export default function CertificateModal({ isOpen, onClose, certificate }: Certi
         {/* Footer Actions */}
         <div className="flex gap-4 p-6 border-t border-white/10">
           <motion.a
-            href={certificate.url}
+            href={certificate.url.replace('/preview', '/view?usp=drive_link')}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

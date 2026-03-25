@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Code2, Palette, Database, Zap, Wrench, Brain } from 'lucide-react'
+import { Code2, Palette, Database, Zap, Wrench, Brain, Heart } from 'lucide-react'
 
 interface SkillsProps {
   isDark: boolean
@@ -13,6 +13,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   Databases: <Database className="w-6 h-6" />,
   'Tools & Platforms': <Wrench className="w-6 h-6" />,
   'AI & APIs': <Brain className="w-6 h-6" />,
+  'Soft Skills': <Heart className="w-6 h-6" />,
 }
 
 export default function Skills({ isDark }: SkillsProps) {
@@ -51,6 +52,11 @@ export default function Skills({ isDark }: SkillsProps) {
       title: 'AI & APIs',
       skills: ['🤖 Groq AI', '🎤 Deepgram', '🧠 OpenAI', '🔌 REST Integration'],
       color: 'from-indigo-600 to-purple-600',
+    },
+    {
+      title: 'Soft Skills',
+      skills: ['🎯 Problem-Solving', '💭 Analytical Thinking', '👥 Team Collaboration', '🔄 Adaptability'],
+      color: 'from-pink-600 to-rose-600',
     },
   ]
 
@@ -191,10 +197,10 @@ export default function Skills({ isDark }: SkillsProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <motion.div whileHover={{ scale: 1.05 }} className="text-center">
               <div className={`text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-600 -webkit-background-clip: text -webkit-text-fill-color: transparent bg-clip-text mb-2`}>
-                6
+                7
               </div>
               <p className={`text-sm ${isDark ? 'text-white/60' : 'text-slate-600'}`}>
-                Tech Categories
+                Skill Categories
               </p>
             </motion.div>
 

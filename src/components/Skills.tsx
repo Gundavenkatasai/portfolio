@@ -24,32 +24,32 @@ export default function Skills({ isDark }: SkillsProps) {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['C', 'C++', 'Python', 'Java', 'JavaScript', 'SQL'],
+      skills: ['🔵 C', '⚙️ C++', '🐍 Python', '☕ Java', '📜 JavaScript', '🗄️ SQL'],
       color: 'from-blue-600 to-cyan-600',
     },
     {
       title: 'Frontend',
-      skills: ['React', 'HTML5', 'CSS3', 'Tailwind CSS', 'Framer Motion'],
+      skills: ['⚛️ React', '🌐 HTML5', '🎨 CSS3', '🎯 Tailwind CSS', '✨ Framer Motion'],
       color: 'from-purple-600 to-pink-600',
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Auth'],
+      skills: ['🟢 Node.js', '🚀 Express.js', '🔗 REST APIs', '🔐 JWT Auth'],
       color: 'from-yellow-600 to-orange-600',
     },
     {
       title: 'Databases',
-      skills: ['MongoDB', 'MySQL', 'Firebase'],
+      skills: ['🍃 MongoDB', '🗄️ MySQL', '🔥 Firebase'],
       color: 'from-green-600 to-emerald-600',
     },
     {
       title: 'Tools & Platforms',
-      skills: ['Git', 'GitHub', 'Postman', 'Docker', 'VS Code', 'Vercel'],
+      skills: ['📦 Git', '🐙 GitHub', '🎯 Postman', '🐳 Docker', '👨‍💻 VS Code', '⚡ Vercel'],
       color: 'from-red-600 to-rose-600',
     },
     {
       title: 'AI & APIs',
-      skills: ['Groq AI', 'Deepgram', 'OpenAI', 'REST Integration'],
+      skills: ['🤖 Groq AI', '🎤 Deepgram', '🧠 OpenAI', '🔌 REST Integration'],
       color: 'from-indigo-600 to-purple-600',
     },
   ]

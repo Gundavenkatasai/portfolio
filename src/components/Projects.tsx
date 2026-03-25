@@ -108,7 +108,7 @@ export default function Projects({ isDark }: ProjectsProps) {
               <div className="h-full flex flex-col justify-between space-y-4">
                 {/* Project Image */}
                 {project.image && (
-                  <div className="w-full h-48 rounded-lg overflow-hidden mb-2">
+                  <div className="w-full h-40 rounded-lg overflow-hidden mb-2">
                     <img
                       src={project.image}
                       alt={project.title}

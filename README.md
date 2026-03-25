@@ -1,8 +1,19 @@
-# Wixstro - Wix Astro Template
+# Gunda VenkataSai - Full Stack Developer Portfolio
 
-A modern, full-featured Wix Astro template built with React, TypeScript, and Tailwind CSS. This template provides a solid foundation for building dynamic, interactive websites with Wix's powerful ecosystem.
+A modern, responsive portfolio website built with React, Vite, TypeScript, and Tailwind CSS. Features a beautiful dark/light theme toggle, smooth animations, 3D effects, and a professional design.
 
 ## 🚀 Features
+
+- **Dark & Light Theme** - Toggle between themes with persistent state
+- **Responsive Design** - Works seamlessly on mobile, tablet, and desktop
+- **Smooth Animations** - Framer Motion for fluid transitions and interactions
+- **3D Animations** - Custom CSS 3D transforms for rotating cubes and visual effects
+- **Glass Morphism UI** - Liquid glass effect components with backdrop blur
+- **Interactive Components** - Hover effects, click animations, and smooth scrolling
+- **Resume Modal** - Embed Google Drive resume viewer
+- **Real Links** - All project links, GitHub, and LinkedIn are fully functional
+- **Performance Optimized** - Built with Vite for lightning-fast build times
+- **Fully Typed** - TypeScript for type safety and better DX
 
 - **Astro Framework** - Modern static site generator with server-side rendering
 - **React Integration** - Full React support with JSX components

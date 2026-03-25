@@ -1,43 +1,68 @@
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { motion } from 'framer-motion'
 
-export default function Footer() {
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/venkatasai', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/venkatasai/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:venkatasaigunda82@gmail.com', label: 'Email' },
-  ];
+interface FooterProps {
+  isDark: boolean
+}
+
+export default function Footer({ isDark }: FooterProps) {
+  const currentYear = new Date().getFullYear()
+
+  const links = [
+    { label: 'Privacy Policy', href: '#' },
+    { label: 'Terms of Service', href: '#' },
+    { label: 'Contact', href: '#contact' },
+  ]
 
   return (
-    <footer className="w-full bg-secondary/50 backdrop-blur-lg border-t border-white/10">
-      <div className="max-w-[120rem] mx-auto px-8 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className={`border-t ${
+      isDark ? 'border-white/10 bg-black/50' : 'border-slate-200 bg-slate-50'
+    } px-6 md:px-8 py-8`}>
+      <div className="max-w-2xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Copyright */}
           <motion.p
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-foreground/60 font-paragraph text-sm"
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className={`text-xs font-light ${
+              isDark ? 'text-white/40' : 'text-slate-500'
+            }`}
           >
-            © 2026 Gunda VenkataSai. All rights reserved.
+            © {currentYear} venkatasai. All rights reserved.
           </motion.p>
 
-          <div className="flex items-center gap-6">
-            {socialLinks.map((link) => (
+          {/* Links */}
+          <div className="flex gap-6">
+            {links.map((link, idx) => (
               <motion.a
-                key={link.label}
+                key={idx}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-primary transition-colors"
-                whileHover={{ scale: 1.1, y: -2 }}
-                aria-label={link.label}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                whileHover={{ color: isDark ? '#00D9FF' : '#3B82F6' }}
+                className={`text-xs font-light transition-colors ${
+                  isDark ? 'text-white/40 hover:text-accent' : 'text-slate-500 hover:text-blue-600'
+                }`}
               >
-                <link.icon size={20} />
+                {link.label}
               </motion.a>
             ))}
           </div>
+
+          {/* Made with */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className={`text-xs font-light ${
+              isDark ? 'text-white/40' : 'text-slate-500'
+            }`}
+          >
+            Made with <span className="text-accent">♥</span> &amp; React
+          </motion.p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
